@@ -1,0 +1,41 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="import" href="ns-sample-element.html">
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      describe('<ns-sample-element>', function() {
+        var container;
+
+        beforeEach(function() {
+          container = document.createElement("div");
+          container.appendChild(document.createElement('ns-sample-element'));
+          document.body.appendChild(container);
+        });
+        afterEach(function() {
+          document.body.removeChild(container);
+        });
+
+        describe('when instantiated without parameters', function() {
+          var el;
+
+          beforeEach(function() {
+            el = document.querySelector('ns-sample-element');
+          });
+
+          it('should have an empty notitle', function() {
+            expect(el.notitle).to.be.empty;
+          });
+
+          it('should have aProp set to false', function() {
+            expect(el.aProp).to.not.be.ok;
+          });
+        });
+      });
+    </script>
+  </body>
+
+</html>
