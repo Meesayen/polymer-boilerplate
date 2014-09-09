@@ -10,5 +10,5 @@ before_install:
 
 before_script:
   - bower install
-  - npm install -g karma
+  - npm install -g karma karma-cli
 
