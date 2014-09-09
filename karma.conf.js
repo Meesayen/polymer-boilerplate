@@ -77,7 +77,6 @@ module.exports = function(config) {
 
   if(process.env.TRAVIS){
     props.browsers = ['Chrome_travis_ci'];
-    props.singleRun = false;
   }
 
   config.set(props);
